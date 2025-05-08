@@ -1,0 +1,466 @@
+/* Set background image for the whole page */
+body {
+    background-color: black;
+    margin: 0;
+    font-family: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* Navbar styling */
+.navbar {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    position: relative;
+}
+
+/* Left section (local and time) aligned to the left */
+.left-section {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Center section (links) centered with gaps of 100px */
+.center-section {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    width: 100%;
+
+}
+.center-section a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.center-section a:hover {
+    color: #ffd700;
+    transition: color 0.3s ease-in-out;
+}
+#clock{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+#clocklabel{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Style for #hero section */
+#hero {
+    background-color: black;
+    font-size: 10rem;
+    line-height: 0.9;
+    font-weight: bold;
+    height: calc(100vh - 60px); /* fill viewport minus navbar height */
+    display: flex;
+    color: #ffd700;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 0.5rem;
+}
+
+.Skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+
+}
+/*
+ #box1{
+    width: 200px;
+    height: 300px ;
+    background-color: rebeccapurple;
+}
+#box2{
+    width: 200px;
+    height: 300px ;
+    background-color: rebeccapurple;
+}
+    */
+
+.Skills div{
+    display: flex;
+    width: 450px;
+    height: 600px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(120deg, #000000, #ffffff);
+    margin-top: 30px; /*new margin-top 30px*/
+   /* margin-bottom: 30px;*/
+   
+   
+}  
+
+
+
+.horizontal-layout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.horizontal-layout h2,
+.horizontal-layout h3{
+    margin: 0;
+    flex-shrink: 0;
+}
+.horizontal-layout h2{
+   /* margin-left: 105px;*/
+    font-size: 3rem;
+    text-align: center;
+}
+
+.horizontal-layout h3{
+    font-size: 1.5rem;
+}
+
+.horizontal-layout svg{
+    flex-shrink: 0;
+}
+
+#box2 h3{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 28px;
+    margin-bottom: 10px;
+
+}
+
+#box2 p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#box3  h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#box3  svg{
+   margin-bottom: 10px;
+}
+
+.aboutSection{
+    color: white;
+    height: 230px;
+    margin: 50px;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+.aboutSection h3{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 2rem;
+}
+.aboutSection p{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/*
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: aqua;
+
+}
+
+.projects div{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+    */
+
+/*
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        background-color: aqua;
+    }
+        */
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the cards */
+            align-items: center;
+            gap: 40px; /* Set equal spacing between cards */
+            padding: 40px;
+
+        }
+    
+    .projects div {
+        display: flex;
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        border-radius: 10px;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        perspective: 1000px; /* Enable 3D perspective */
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .projects div .card {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+    }
+    
+    .projects div.flipped .card {
+        transform: rotateY(180deg);
+    }
+    
+    .projects div .card .front,
+    .projects div .card .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        font-size: 1.5rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+    
+    .projects div .card .front {
+        background: linear-gradient(45deg, #ffd700, #231d01);
+        color: white;
+
+    }
+    
+    .projects div .card .back {
+        background-color: rgb(255, 255, 255); 
+        backdrop-filter: blur(5px);
+        color: black;
+        transform: rotateY(180deg);
+    }
+
+
+    .contactSection{
+       width: 100%;
+       height: 300px;
+       flex-direction: column;
+       color: white;
+       display: flex;
+       align-items: center;
+    }
+
+    .contactSection h3{
+        font-size: 2.5rem;
+    }
+    .contactSection p{
+        font-size: 1.5rem;
+    }
+
+
+    .contactSection button {
+        font-size: 1.5rem; /* Increase text size */
+        padding: 10px 20px; /* Add padding for larger buttons */
+        border-radius: 10px; /* Optional: round the corners */
+        cursor: pointer; /* Add a pointer cursor */
+        margin: 5px; /* Add spacing between buttons */
+    }
+
+#copyright{
+    margin-top: 10px;
+    font-size: 1rem;
+}  
+
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        height: 50px; /* Reduce navbar height */
+    }
+
+    .center-section {
+        justify-content: flex-end; /* Move links to the right */
+        gap: 20px; /* Reduce spacing between links */
+        padding-right: 10px;
+    }
+
+    #clock, #clocklabel {
+        font-size: 16px; /* Adjust clock font size for smaller screens */
+    }
+
+    .center-section a {
+        font-size: 16px; /* Reduce link font size */
+    }
+    #hero {
+        font-size: 6rem; /* Adjust size for medium screens */
+    }
+
+    .Skills {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .Skills div {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .Skills div h2, .Skills div h3 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .Skills div p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+}
+
+
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 40px; /* Further reduce navbar height */
+    }
+
+    .center-section {
+        gap: 10px;
+       padding-right: 10px;
+    }
+
+    #clock, #clocklabel {
+        font-size: 14px; /* Further adjust clock font size */
+    }
+
+    .center-section a {
+        font-size: 14px; /* Further reduce link font size */
+    }
+
+    #hero {
+        font-size: 4rem; /* Adjust size for smaller screens */
+    }
+
+    .Skills {
+        gap: 15px;
+    }
+
+    .Skills div {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .Skills div h2, .Skills div h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+  
+
+    .Skills div p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .aboutSection {
+        height: auto; /* Allow the height to adjust based on content */
+        margin: 20px; /* Reduce margin for smaller screens */
+        padding: 15px; /* Adjust padding for better spacing */
+    }
+
+    .aboutSection h3 {
+        font-size: 2rem; /* Reduce heading size */
+        margin-left: 0; /* Center-align heading */
+        text-align: center;
+    }
+
+    .aboutSection p {
+        font-size: 1.5rem; /* Reduce paragraph font size */
+        text-align: justify; /* Ensure proper text alignment */
+    }
+
+    .projects {
+        margin-top: 20px; /* Add spacing between sections */
+    }
+
+    .contactSection {
+        width: 100%; /* Ensure it spans the full width */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Add padding for better spacing */
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align content */
+        text-align: center; /* Center-align text */
+    }
+
+    .contactSection h3 {
+        font-size: 1.8rem; /* Reduce heading size */
+        margin-bottom: 10px; /* Add spacing below the heading */
+        text-align: center;
+        width: 100%;
+    }
+
+    .contactSection p {
+        font-size: 1.2rem; /* Reduce paragraph font size */
+        margin-bottom: 15px; /* Add spacing below the paragraph */
+        text-align: center;
+        width: 100%;
+    }
+
+    .contactSection button {
+        font-size: 1.2rem; /* Adjust button text size */
+        padding: 8px 16px; /* Adjust button padding */
+        margin: 5px; /* Add spacing between buttons */
+    }
+  
+}
+
+
+
+
+
+
